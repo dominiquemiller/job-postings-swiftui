@@ -15,7 +15,7 @@ struct PostingRow: View {
             HStack {
                 Text(job.title)
                 Spacer()
-                Text("Mar 26")
+                Text(job.formatDate(for: .monthDay))
             }
             HStack {
                 Text(job.type)

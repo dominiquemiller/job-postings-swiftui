@@ -10,7 +10,9 @@ import Foundation
 
 struct TextContent {
     struct Errors {
-        static let jobIndex = "Could not retrieve nay jobs, please try again."
+        static let retrievePosts = "Could not retrieve any jobs, please try again."
+        static let retrievePost = "Could not retrieve job, please try again."
+        static let alertTitle = "Oh No!"
     }
     
     struct Images {
@@ -18,9 +20,12 @@ struct TextContent {
     }
     
     struct Lables {
+        static let jobDescription    = "Job Description"
+        static let jobDetails        = "Job Details"
+        static let ok                = "OK"
+        static let noResults         = "No results"
         static let todaysJobPostings = "Most Recent Job Postings"
         static let welcome           = "Welcome"
-        static let noResults         = "No results"
     }
     
     struct Navigation {
