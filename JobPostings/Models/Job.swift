@@ -8,6 +8,19 @@
 
 import Foundation
 
+enum DateFormat {
+    case numeric, monthDay
+    
+    var format: String {
+        switch self {
+        case .numeric:
+            return "M/d/yy"
+        case .monthDay:
+            return "MMM d"
+        }
+    }
+}
+
 struct Location: Codable {
     var city: String
     var state: String
@@ -24,5 +37,22 @@ struct Job: Codable, Identifiable {
     var schedule: String
     var travelRequired: Bool
     var summary: String
+}
+
+// MARK: - Convienance methods
+extension Job {
+    func categoriesAsString() -> String {
+        return categories.joined(separator: ", ")
+    }
+    
+    func locationAsString() -> String {
+        return "\(location.city), \(location.state) \(location.country)"
+    }
+    
+    func formatDate(for formatting: DateFormat) -> String {
+        let df = DateFormatter()
+        df.dateFormat = formatting.format
+        return df.string(from: date)
+    }
 }
 

@@ -11,7 +11,7 @@ import Foundation
 /// Helper method to decode JSON from a file
 /// Meant to be used for local devleopment
 extension Bundle {
-    func decode<T: Decodable>(_ type: T.Type, from file: String, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) -> T {
+    func decode<T: Decodable>(_ type: T.Type, from file: String, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .secondsSince1970, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.")
         }

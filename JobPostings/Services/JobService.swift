@@ -11,18 +11,21 @@ import Combine
 
 protocol JobRetrieval {
     func index() -> AnyPublisher<[Job], Never>
-    func show(with: Int) -> AnyPublisher<Job?, Never>
+    func show(with: Int) -> AnyPublisher<Job, Never>
 }
 
 class JobService: JobRetrieval {
+    var jobs: [Job]
+    
+    init() {
+        jobs = Bundle.main.decode([Job].self, from: "jobs.json")
+    }
+    
     func index() -> AnyPublisher<[Job], Never> {
-        let jobs = Bundle.main.decode([Job].self, from: "jobs.json")
         return Just(jobs).eraseToAnyPublisher()
     }
     
-    func show(with id: Int) -> AnyPublisher<Job?, Never> {
-        let jobs = Bundle.main.decode([Job].self, from: "jobs.json")
-        let job = jobs.first{ $0.id == id }
-        return Just(job).eraseToAnyPublisher()
+    func show(with id: Int) -> AnyPublisher<Job, Never> {
+        return jobs.publisher.first(where: {$0.id == id}).eraseToAnyPublisher()
     }
 }

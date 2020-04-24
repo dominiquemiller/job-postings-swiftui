@@ -22,12 +22,10 @@ struct PostingsView: View {
     
     var body: some View {
         VStack {
-            Text(TextContent.Lables.todaysJobPostings)
-            NavigationView {
-                List(postings) { post in
-                    NavigationLink(destination: self.postingDestination(for: post)) {
-                       PostingRow(job: post)
-                    }
+            HeaderText(text: TextContent.Lables.todaysJobPostings)
+            List(postings) { post in
+                NavigationLink(destination: self.postingDestination(for: post)) {
+                    PostingRow(job: post)
                 }
             }
         }.padding()
@@ -43,7 +41,7 @@ extension PostingsView {
     }
     
     func postingDestination(for post: Job) -> PostingView {
-        PostingView(viewModel: PostingViewModel(service: JobService(), id: 1))
+        PostingView(viewModel: PostingViewModel(service: JobService(), id: post.id))
     }
 }
 

@@ -14,13 +14,18 @@ struct PostingRow: View {
         VStack {
             HStack {
                 Text(job.title)
+                    .bold()
+                    .foregroundColor(Color.JobPostings.azure)
                 Spacer()
-                Text("Mar 26")
+                Text(job.formatDate(for: .monthDay))
             }
             HStack {
                 Text(job.type)
+                    .bold()
+                    .foregroundColor(Color.JobPostings.barney)
                 Text("|")
                 Text(job.location.country)
+                    .foregroundColor(Color.JobPostings.yellow)
                 Spacer()
             }
             Text(job.summary).padding(.top, 10)
