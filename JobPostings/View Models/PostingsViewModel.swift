@@ -14,7 +14,6 @@ class PostingsViewModel: ObservableObject {
     @Published var postings: [Job] = []
     var sortedByNewest = true {
         didSet {
-            print("did set called")
             sortedByDate(newest: sortedByNewest)
         }
     }
