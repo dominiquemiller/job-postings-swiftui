@@ -17,7 +17,6 @@ struct HomeView: View {
                     .aspectRatio(contentMode: .fit)
                     .opacity(0.4)
                 VStack {
-                    Text(TextContent.Lables.welcome)
                     NavigationLink(destination: PostingsView(viewModel: PostingsViewModel(service: JobService()))) {
                         NavLinkText(value: TextContent.Navigation.browseJobsLink)
                     }
