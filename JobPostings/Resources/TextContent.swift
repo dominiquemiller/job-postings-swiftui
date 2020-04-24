@@ -9,8 +9,9 @@
 import Foundation
 
 struct TextContent {
-    struct Errors {
-        static let retrievePosts = "Could not retrieve any jobs, please try again."
+    struct Buttons {
+        static let sortPostingsByNewest = "Sort by most recent"
+        static let sortPostingsByOldes = "Sort by oldest"
         static let retrievePost = "Could not retrieve job, please try again."
         static let alertTitle = "Oh No!"
     }

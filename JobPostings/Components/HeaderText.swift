@@ -15,11 +15,12 @@ struct HeaderText: View {
             .font(.system(size: 30))
             .bold()
             .foregroundColor(Color.JobPostings.azure)
+            .multilineTextAlignment(.center)
     }
 }
 
 struct HeaderText_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderText(text: "Hello World!")
+        HeaderText(text: TextContent.Lables.todaysJobPostings)
     }
 }

@@ -10,7 +10,6 @@ import SwiftUI
 
 struct PostingsView: View {
     @ObservedObject var viewModel: PostingsViewModel
-    @State private var sorted = false
     
     var postings: [Job] {
         return viewModel.postings
@@ -23,6 +22,9 @@ struct PostingsView: View {
     var body: some View {
         VStack {
             HeaderText(text: TextContent.Lables.todaysJobPostings)
+            Toggle(isOn: $viewModel.sortedByNewest) {
+                Text(TextContent.Buttons.sortPostingsByNewest)
+            }.padding()
             List(postings) { post in
                 NavigationLink(destination: self.postingDestination(for: post)) {
                     PostingRow(job: post)
@@ -42,6 +44,10 @@ extension PostingsView {
     
     func postingDestination(for post: Job) -> PostingView {
         PostingView(viewModel: PostingViewModel(service: JobService(), id: post.id))
+    }
+    
+    func sortByMostRecent(sorted: Bool ) {
+        viewModel.sortedByDate(newest: sorted)
     }
 }
 
