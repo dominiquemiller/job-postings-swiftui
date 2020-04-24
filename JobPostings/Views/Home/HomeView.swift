@@ -21,7 +21,7 @@ struct HomeView: View {
                     NavigationLink(destination: PostingsView(viewModel: PostingsViewModel(service: JobService()))) {
                         NavLinkText(value: TextContent.Navigation.browseJobsLink)
                     }
-                }.navigationBarTitle( Text(TextContent.Navigation.mainBarTitle))
+                }.navigationBarTitle( Text(TextContent.Navigation.mainBarTitle), displayMode: .inline)
             }
         }
     }
