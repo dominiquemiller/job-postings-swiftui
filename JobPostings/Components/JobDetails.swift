@@ -19,7 +19,7 @@ struct JobDetails: View {
             }
             HStack {
                 Text("Location:").bold()
-                Text(posting.location.country)
+                Text(posting.locationAsString())
                 Spacer()
             }
             HStack {

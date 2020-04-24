@@ -22,7 +22,7 @@ struct PostingsView: View {
     
     var body: some View {
         VStack {
-            Text(TextContent.Lables.todaysJobPostings)
+            HeaderText(text: TextContent.Lables.todaysJobPostings)
             List(postings) { post in
                 NavigationLink(destination: self.postingDestination(for: post)) {
                     PostingRow(job: post)
