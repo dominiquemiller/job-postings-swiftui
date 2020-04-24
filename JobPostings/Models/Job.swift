@@ -37,9 +37,16 @@ struct Job: Codable, Identifiable {
     var schedule: String
     var travelRequired: Bool
     var summary: String
-    
+}
+
+// MARK: - Convienance methods
+extension Job {
     func categoriesAsString() -> String {
         return categories.joined(separator: ", ")
+    }
+    
+    func locationAsString() -> String {
+        return "\(location.city), \(location.state) \(location.country)"
     }
     
     func formatDate(for formatting: DateFormat) -> String {
