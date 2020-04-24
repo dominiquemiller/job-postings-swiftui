@@ -10,6 +10,9 @@
 		045CBF73244F7E5400229E21 /* PostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBF72244F7E5400229E21 /* PostingView.swift */; };
 		045CBF75244F7E6D00229E21 /* PostingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBF74244F7E6D00229E21 /* PostingRow.swift */; };
 		045CBF77244FA71C00229E21 /* PostingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBF76244FA71C00229E21 /* PostingViewModel.swift */; };
+		0486D3E0245285350067A8A4 /* JobDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486D3DF245285350067A8A4 /* JobDetails.swift */; };
+		0486D3E2245289270067A8A4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486D3E1245289270067A8A4 /* ColorExtension.swift */; };
+		0486D3E624528A9E0067A8A4 /* HeaderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486D3E524528A9E0067A8A4 /* HeaderText.swift */; };
 		04A380C42450A0D300ACAC53 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A380C32450A0D300ACAC53 /* BundleExtension.swift */; };
 		04A380C62450A5E000ACAC53 /* jobs.json in Resources */ = {isa = PBXBuildFile; fileRef = 04A380C52450A5E000ACAC53 /* jobs.json */; };
 		04AEC333244E26A30067F4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEC332244E26A30067F4BD /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 		045CBF72244F7E5400229E21 /* PostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingView.swift; sourceTree = "<group>"; };
 		045CBF74244F7E6D00229E21 /* PostingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingRow.swift; sourceTree = "<group>"; };
 		045CBF76244FA71C00229E21 /* PostingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewModel.swift; sourceTree = "<group>"; };
+		0486D3DF245285350067A8A4 /* JobDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetails.swift; sourceTree = "<group>"; };
+		0486D3E1245289270067A8A4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		0486D3E524528A9E0067A8A4 /* HeaderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderText.swift; sourceTree = "<group>"; };
 		04A380C32450A0D300ACAC53 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		04A380C52450A5E000ACAC53 /* jobs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobs.json; sourceTree = "<group>"; };
 		04AEC32F244E26A30067F4BD /* JobPostings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPostings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				04A380C32450A0D300ACAC53 /* BundleExtension.swift */,
+				0486D3E1245289270067A8A4 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				04AEC362244E31580067F4BD /* NavLinkText.swift */,
+				0486D3DF245285350067A8A4 /* JobDetails.swift */,
+				0486D3E524528A9E0067A8A4 /* HeaderText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -350,10 +359,13 @@
 				045CBF77244FA71C00229E21 /* PostingViewModel.swift in Sources */,
 				04A380C42450A0D300ACAC53 /* BundleExtension.swift in Sources */,
 				04AEC333244E26A30067F4BD /* AppDelegate.swift in Sources */,
+				0486D3E0245285350067A8A4 /* JobDetails.swift in Sources */,
 				045CBF75244F7E6D00229E21 /* PostingRow.swift in Sources */,
 				04AEC363244E31580067F4BD /* NavLinkText.swift in Sources */,
 				045CBF73244F7E5400229E21 /* PostingView.swift in Sources */,
 				04AEC35D244E2C080067F4BD /* PostingsView.swift in Sources */,
+				0486D3E624528A9E0067A8A4 /* HeaderText.swift in Sources */,
+				0486D3E2245289270067A8A4 /* ColorExtension.swift in Sources */,
 				04AEC36B244E3B1C0067F4BD /* JobService.swift in Sources */,
 				04AEC335244E26A30067F4BD /* SceneDelegate.swift in Sources */,
 				04AEC368244E39FE0067F4BD /* PostingsViewModel.swift in Sources */,
