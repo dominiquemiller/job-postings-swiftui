@@ -10,9 +10,9 @@ import SwiftUI
 
 extension Color {
     enum JobPostings {
-        static let azure = Color(red: 0 / 255.0, green: 174 / 255.0, blue: 239 / 255.0)
-        static let barney = Color(red: 198.0 / 255.0, green: 39.0 / 255.0, blue: 177.0 / 255.0)
-        static let gray  = Color(red: 216 / 255.0, green: 216 / 255.0, blue: 216 / 255.0)
-        static let yellow = Color(red: 184 / 255.0, green: 214 / 255.0, blue: 55 / 255.0)
+        static let azure = Color("azure")
+        static let barney = Color("barney")
+        static let gray  = Color("faded_gray")
+        static let yellow = Color("yellowish")
     }
 }

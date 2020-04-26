@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 class PostingViewModel: ObservableObject {
-    @Published var header: String = TextContent.Lables.todaysJobPostings
+    @Published var header: String = TextContent.Labels.todaysJobPostings
     @Published var posting: Job?
         
     private let jobService: JobRetrieval
