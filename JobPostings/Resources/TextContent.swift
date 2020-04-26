@@ -20,7 +20,7 @@ struct TextContent {
         static let jobsBackground = "jobs_background"
     }
     
-    struct Lables {
+    struct Labels {
         static let datePosted        = "Date Posted:"
         static let location          = "Location:"
         static let jobType           = "Job Type:"
@@ -31,6 +31,7 @@ struct TextContent {
         static let jobDetails        = "Job Details"
         static let ok                = "OK"
         static let noResults         = "No results"
+        static let posted            = "Posted"
         static let todaysJobPostings = "Most Recent Job Postings"
         static let welcome           = "Welcome"
     }

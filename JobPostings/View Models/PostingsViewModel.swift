@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 class PostingsViewModel: ObservableObject {
-    @Published var header: String = TextContent.Lables.todaysJobPostings
+    @Published var header: String = TextContent.Labels.todaysJobPostings
     @Published var postings: [Job] = []
     var sortedByNewest = true {
         didSet {

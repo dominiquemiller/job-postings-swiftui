@@ -21,7 +21,7 @@ struct PostingsView: View {
     
     var body: some View {
         VStack {
-            HeaderText(text: TextContent.Lables.todaysJobPostings)
+            HeaderText(text: TextContent.Labels.todaysJobPostings)
             Toggle(isOn: $viewModel.sortedByNewest) {
                 Text(TextContent.Buttons.sortPostingsByNewest)
             }.padding()
@@ -37,7 +37,7 @@ struct PostingsView: View {
 extension PostingsView {
     var emptySection: some View {
       Section {
-        Text(TextContent.Lables.noResults)
+        Text(TextContent.Labels.noResults)
           .foregroundColor(.gray)
       }
     }

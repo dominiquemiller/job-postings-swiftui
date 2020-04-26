@@ -19,7 +19,7 @@ struct PostingView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Posted")
+                Text(TextContent.Labels.posted)
                 viewModel.posting.map { Text($0.formatDate(for: .numeric)) }
                 Spacer()
             }.padding([.top, .bottom])
@@ -27,19 +27,18 @@ struct PostingView: View {
             viewModel.posting.map { HeaderText(text: $0.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top) }
-            HStack {
-                ForEach(viewModel.posting!.categories, id:\.self) { cat in
-                    CategoryBox(text: cat)
-                }
-            }.frame(maxWidth: .infinity, alignment: .leading)
-             .padding(.bottom)
+            
+            viewModel.posting.map { CategoryRowView(categories: $0.categories)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.bottom) }
             VStack {
-                HeaderText(text: TextContent.Lables.jobDescription)
+                HeaderText(text: TextContent.Labels.jobDescription)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 viewModel.posting.map { Text($0.summary) }
             }.padding([.top, .bottom])
+            
             VStack {
-                HeaderText(text: TextContent.Lables.jobDetails)
+                HeaderText(text: TextContent.Labels.jobDetails)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 viewModel.posting.map { JobDetails(posting: $0)}
             }.padding([.top, .bottom])

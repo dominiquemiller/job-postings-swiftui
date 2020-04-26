@@ -12,16 +12,16 @@ struct JobDetails: View {
     var posting: Job
     var body: some View {
         VStack {
-            JobDetailRow(rowTitle: TextContent.Lables.location,
+            JobDetailRow(rowTitle: TextContent.Labels.location,
                          rowData: posting.locationAsString(),
                          rowColor: .white)
-            JobDetailRow(rowTitle: TextContent.Lables.jobType,
+            JobDetailRow(rowTitle: TextContent.Labels.jobType,
                          rowData: posting.type,
                          rowColor: Color.JobPostings.gray)
-            JobDetailRow(rowTitle: TextContent.Lables.jobSchedule,
+            JobDetailRow(rowTitle: TextContent.Labels.jobSchedule,
                          rowData: posting.schedule,
                          rowColor: .white)
-            JobDetailRow(rowTitle: TextContent.Lables.travelRequired,
+            JobDetailRow(rowTitle: TextContent.Labels.travelRequired,
                          rowData: travelRequired(),
                          rowColor: Color.JobPostings.gray)
         }
