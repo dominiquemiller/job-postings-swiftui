@@ -21,6 +21,12 @@ struct TextContent {
     }
     
     struct Lables {
+        static let datePosted        = "Date Posted:"
+        static let location          = "Location:"
+        static let jobType           = "Job Type:"
+        static let jobSchedule       = "Job Schedule:"
+        static let travelRequired    = "Travel Required:"
+        static let categories        = "Categories:"
         static let jobDescription    = "Job Description"
         static let jobDetails        = "Job Details"
         static let ok                = "OK"

@@ -12,36 +12,18 @@ struct JobDetails: View {
     var posting: Job
     var body: some View {
         VStack {
-            HStack {
-                Text("Date Posted:").bold()
-                Text(posting.formatDate(for: .numeric))
-                Spacer()
-            }
-            HStack {
-                Text("Location:").bold()
-                Text(posting.locationAsString())
-                Spacer()
-            }
-            HStack {
-                Text("Job Type:").bold()
-                Text(posting.type)
-                Spacer()
-            }
-            HStack {
-                Text("Job Schedule:").bold()
-                Text(posting.schedule)
-                Spacer()
-            }
-            HStack {
-                Text("Travel Required:").bold()
-                Text(travelRequired())
-                Spacer()
-            }
-            HStack {
-                Text("Categories:").bold()
-                Text(posting.categoriesAsString())
-                Spacer()
-            }
+            JobDetailRow(rowTitle: TextContent.Lables.location,
+                         rowData: posting.locationAsString(),
+                         rowColor: .white)
+            JobDetailRow(rowTitle: TextContent.Lables.jobType,
+                         rowData: posting.type,
+                         rowColor: Color.JobPostings.gray)
+            JobDetailRow(rowTitle: TextContent.Lables.jobSchedule,
+                         rowData: posting.schedule,
+                         rowColor: .white)
+            JobDetailRow(rowTitle: TextContent.Lables.travelRequired,
+                         rowData: travelRequired(),
+                         rowColor: Color.JobPostings.gray)
         }
     }
     
