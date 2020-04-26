@@ -21,6 +21,6 @@ struct HeaderText: View {
 
 struct HeaderText_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderText(text: TextContent.Lables.todaysJobPostings)
+        HeaderText(text: TextContent.Labels.todaysJobPostings)
     }
 }

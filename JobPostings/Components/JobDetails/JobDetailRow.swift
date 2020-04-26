@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct JobDetailRow: View {
+    @Environment(\.colorScheme) var colorScheme
     var rowTitle: String
     var rowData: String
     var rowColor: Color
@@ -20,7 +21,7 @@ struct JobDetailRow: View {
                 .frame(minWidth: 0, maxWidth: 150, alignment: .leading)
             Text(rowData)
             Spacer()
-        }.background(rowColor)
+        }.background(colorScheme == .dark ? Color.black : rowColor)
     }
 }
 
