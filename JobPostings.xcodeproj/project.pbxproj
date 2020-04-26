@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0422C58E245646A9001E09B4 /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C58D245646A9001E09B4 /* CategoryRowView.swift */; };
 		045CBF73244F7E5400229E21 /* PostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBF72244F7E5400229E21 /* PostingView.swift */; };
 		045CBF75244F7E6D00229E21 /* PostingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBF74244F7E6D00229E21 /* PostingRow.swift */; };
 		045CBF77244FA71C00229E21 /* PostingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBF76244FA71C00229E21 /* PostingViewModel.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0422C58D245646A9001E09B4 /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		045CBF72244F7E5400229E21 /* PostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingView.swift; sourceTree = "<group>"; };
 		045CBF74244F7E6D00229E21 /* PostingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingRow.swift; sourceTree = "<group>"; };
 		045CBF76244FA71C00229E21 /* PostingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewModel.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				04C8E1002454F46D0035CB30 /* JobDetailRow.swift */,
 				0486D3DF245285350067A8A4 /* JobDetails.swift */,
+				0422C58D245646A9001E09B4 /* CategoryRowView.swift */,
 			);
 			path = JobDetails;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AEC360244E2D480067F4BD /* TextContent.swift in Sources */,
+				0422C58E245646A9001E09B4 /* CategoryRowView.swift in Sources */,
 				045CBF77244FA71C00229E21 /* PostingViewModel.swift in Sources */,
 				04A380C42450A0D300ACAC53 /* BundleExtension.swift in Sources */,
 				04AEC333244E26A30067F4BD /* AppDelegate.swift in Sources */,
