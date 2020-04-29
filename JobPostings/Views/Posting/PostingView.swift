@@ -42,6 +42,12 @@ struct PostingView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 viewModel.posting.map { JobDetails(posting: $0)}
             }.padding([.top, .bottom])
+        }.alert(isPresented: $viewModel.apiError) {
+            Alert(title: Text(TextContent.Buttons.alertTitle),
+                  message: Text(TextContent.Errors.postNotFound),
+                  dismissButton: .default(Text(TextContent.Buttons.gotIt)) {
+                    self.presentationMode.wrappedValue.dismiss()
+                })
         }.padding()
     }
 }
@@ -49,7 +55,7 @@ struct PostingView: View {
 #if DEBUG
 struct PostingView_Previews: PreviewProvider {
     static var previews: some View {
-        let vm = PostingViewModel(service: JobService(), id: 1)
+        let vm = PostingViewModel(service: JobService(), id: 14)
         return PostingView(viewModel: vm)
     }
 }

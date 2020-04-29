@@ -14,6 +14,11 @@ struct TextContent {
         static let sortPostingsByOldes = "Sort by oldest"
         static let retrievePost = "Could not retrieve job, please try again."
         static let alertTitle = "Oh No!"
+        static let gotIt = "Got It!"
+    }
+    
+    struct Errors {
+        static let postNotFound = "Post could not be found!"
     }
     
     struct Images {
